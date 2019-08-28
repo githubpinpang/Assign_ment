@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What happens this day</title>
+	
+	<style>
+		form
+		{
+			width:500px;
+			margin:auto;
+			padding:20px;
+			background:663366;
+			font--size:20px;
+			font-family:verdana;
+			color:white;
+		}
+input[type = text]
+{
+	width:80%;
+	padding:5px;
+	font--size:18px;
+}
+input[type = submit]
+{
+  padding:5px;
+  font--size:20px;
+  width:100px;
+}
+
+
+
+	</style>
+
+
+</head>
+<style media="screen">
+</style>
+<body>
+
+
+	
+	<label> Date:</label>
+	<input id='date_id' type="date" min="1900-01"/>
+	<br><br>
+                <!-- very important info of the code -->
+	           <!-- <input type="submit" onclick="document.getElementById('content_id').innerHTML = Date()" value="Click Me"> -->
+	<input type="submit" onclick="document.getElementById('content_id').innerHTML = Date()" value="Click Me">
+	<!--  <button  type="button" onclick="document.getElementByID('content_id').innerHTML = Date()">Submit</button> -->
+  <h1 id='idd'>Heyy Its Me</h1>
+  <p id='content_id'>content!</p>
+
+
+ <!--  working with local storage https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/ -->
+
+           <!--  https://www.w3schools.com/html/html_form_input_types.asp---input types -->
+<!-- <select name="month">
+	<option value="month">Month </option>
+    <option value="january">January </option>
+    <option value="february">February </option>
+     <option value="March">March </option>
+      <option value="April">April </option>
+       <option value="May">May </option>
+        <option value="June">June </option>
+         <option value="July">July </option>
+          <option value="August">August </option>
+           <option value="September">September </option>
+            <option value="October">October </option>
+             <option value="November">November </option>
+               <option value="December">December </option> -->
+
+   <!-- on how to integrate to HTML file trying -->
+
+<form>
+function history()
+{
+  alert('Heyy Ziiona');
+
+}
+</form>
+</body>
+<script type="text/javascript">
+	// let my_obj = 
+	// {
+ //      date : "09-01-2017",
+ //      history : "week of european banking authority!"
+	// };
+
+	
+	// let my_obj_serialized = JSON.stringify(my_obj);
+	
+	// localStorage.setItem("my_obj",my_obj_serialized);
+	// // let deserial = JSON.parse(localStorage.getItem("my_obj"));
+ //     console.log(deserial);
+  
+  let my_obj =
+  {
+  "hists" : [
+     {"01-01-1970" : "Where japan ranked on 2000's civilization"},
+     {"10-10-2010" : "announcement of international wisdom"},
+     {"07-17-1999" : "civil engineering aviation"},
+     {"21-01-2018" : "breakthrough of industrial civilization"},
+  ]
+};
+
+let myobj = JSON.stringify(my_obj);
+    ////////////////////////////
+localStorage.setItem("01-01-1970" , "Where japan ranked on 2000's civilization");
+localStorage.setItem("10-10-2010" , "announcement of international wisdom");
+localStorage.setItem("07-17-1999" , "civil engineering aviation");
+localStorage.setItem("21-01-2018" , "breakthrough of industrial civilization");
+
+
+   //let deserial = JSON.parse(localStorage.getItem("my_obj"));
+
+    console.log(localStorage.getItem("01-01-1970"));
+
+// console.log(myobj);
+// console.log(deserial);
+
+</script>
+
+</html>
