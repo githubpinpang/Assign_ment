@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What happens this day</title>
+	
+	<style>
+		form
+		{
+			width:500px;
+			margin:auto;
+			padding:20px;
+			background:663366;
+			font--size:20px;
+			font-family:verdana;
+			color:white;
+		}
+input[type = text]
+{
+	width:80%;
+	padding:5px;
+	font--size:18px;
+}
+input[type = submit]
+{
+  padding:5px;
+  font--size:20px;
+  width:100px;
+}
+
+
+
+	</style>
+
+
+</head>
+<style media="screen">
+</style>
+
+<script type="text/javascript">
+	
+  
+  let my_obj =
+  {
+  
+     "01-01-1970": "Where japan ranked on 2000's civilization",
+     "10-10-2010" : "announcement of international wisdom",
+     "07-17-1999" : "civil engineering aviation",
+     "21-01-2018" : "breakthrough of industrial civilization",
+     "09-09-1990": "Hzbna bet qoxera",
+     "02-02-2012": "foundation of WHO",
+  
+};
+
+ let myobj = JSON.stringify(my_obj);
+    ////////////////////////////
+localStorage.setItem("1970-01-01" , "Where japan ranked on 2000's civilization");
+localStorage.setItem("10-10-2010" , "announcement of international wisdom");
+localStorage.setItem("07-17-1999" , "civil engineering aviation");
+localStorage.setItem("21-01-2018" , "breakthrough of industrial civilization");
+localStorage.setItem("02-02-2012", "foundation of WHO");
+localStorage.setItem("1990-01-01" , "null history");
+localStorage.setItem("1980-01-01" , "WAR between EPRDF and DERG");
+localStorage.setItem("2000-01-01" , "Ethiopian Millenium");
+localStorage.setItem("1970-01-01" , "Ethiopia in the middle of DERG regime");
+
+   //let deserial = JSON.parse(localStorage.getItem("my_obj"));
+
+    console.log(localStorage.getItem("02-02-2012"));
+
+// console.log(myobj);
+// console.log(deserial);
+
+</script>
+<body>
+
+
+	<label> * PLEASE ENTER THE DATE SOON AFTER 1900 AND LETS FINDOUT WHAT HISTORY HAS FOR US * ...</lable><br><br>
+	<label> Date:</label>
+	<input id='date_id' type="date" min="1900-01"/>
+	<br><br>
+                <!-- very important info of the code -->
+	          <!--  <input type="submit" onclick="document.getElementById('content_id').innerHTML = Date()" value="Click Me"> -->
+	     <!--   if (localStorage.getItem("username") === null) {
+                    alert('no History record for this day'); -->
+               
+	<input type="submit" onclick="if (localStorage.getItem(document.getElementById('date_id').value) === null) 
+	{
+	
+     document.getElementById('content_id').innerHTML = 'Sorry!! ... There is No History record for this day';
+      }
+	else 
+	{
+	document.getElementById('content_id').innerHTML = localStorage.getItem(document.getElementById('date_id').value)}" value="Click Me">
+
+   
+	 <!-- <input type="submit" onclick="document.getElementById('content_id').innerHTML = document.getElementById('date_id').value" value="Click Me">
+  -->
+	<!--  <button  type="button" onclick="document.getElementByID('content_id').innerHTML = Date()">Submit</button> -->
+  <h1 id='idd'>SHOW TIME ...</h1>
+  <p id='content_id'>content!</p><br><br>
+
+    <label> You Wanna Create/Insert a History ?</label><br>
+   <label> </label>> <input type="text" id='in_id'>
+ <!--  working with local storage https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/ -->
+
+  <!--  https://www.w3schools.com/html/html_form_input_types.asp---input types -->
+
+
+
+</body>
+
+
+</html>
+
+
+<!-- OVERVIEW OF WEB STORAGE:
+I. LOCAL STORAGE: a stored data with no expiration date.
+client side storage.....
+contains properties as setItem(), getItem(), removeItem(), clear()
+the storage stores as a key and value....
+          { key: "value", length:1}
+
+II. SESSION STORAGE: A data which is closed after browser window is closed. -->
